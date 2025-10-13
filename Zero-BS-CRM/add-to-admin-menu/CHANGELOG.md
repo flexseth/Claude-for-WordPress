@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2025-10-13
+
+### Added
+- Command palette integration for WordPress 6.3+ block editor
+- "Zero BS CRM: Add New Contact" command in command palette
+- "Zero BS CRM: Add New Company" command in command palette
+- JavaScript file (`js/command-palette.js`) using `@wordpress/commands` API
+- Action hooks `zbscrm_admin_bar_before_enqueue_command_scripts` and `zbscrm_admin_bar_after_enqueue_command_scripts`
+- Script enqueuing on `enqueue_block_editor_assets` hook
+- Localized script data for command labels and URLs
+
+### Changed
+- Updated plugin description to mention command palette support
+- Enhanced README with command palette documentation and block editor requirements
+- Updated FAQ with command palette usage information
+
 ## [1.0.0] - 2025-10-12
 
 ### Added
@@ -55,11 +71,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version History
 
+- **1.1.0** (2025-10-13) - Added command palette integration
 - **1.0.0** (2025-10-12) - Initial release
 
 ---
 
 ## Upgrade Notice
+
+### 1.1.0
+Added command palette support for WordPress 6.3+ block editor. No breaking changes.
 
 ### 1.0.0
 Initial release. No upgrade required.

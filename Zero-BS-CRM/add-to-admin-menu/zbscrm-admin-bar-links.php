@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Zero BS CRM - Add to Admin Menu
  * Plugin URI: https://github.com/yourusername/zbscrm-admin-bar-links
- * Description: Adds "Add New Contact" and "Add New Company" quick links to the WordPress admin bar under the "New" menu for Zero BS CRM (Jetpack CRM).
- * Version: 1.0.0
+ * Description: Adds "Add New Contact" and "Add New Company" quick links to the WordPress admin bar and command palette for Zero BS CRM (Jetpack CRM).
+ * Version: 1.1.0
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: Your Name
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  */
-define( 'ZBSCRM_ADMIN_BAR_LINKS_VERSION', '1.0.0' );
+define( 'ZBSCRM_ADMIN_BAR_LINKS_VERSION', '1.1.0' );
 
 /**
  * Plugin base name.

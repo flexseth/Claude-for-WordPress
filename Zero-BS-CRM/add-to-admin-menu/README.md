@@ -55,9 +55,9 @@ Two new items appear in the WordPress admin bar:
 1. **New → Contact** - Links to the "Add New Contact" page in Zero BS CRM
 2. **New → Company** - Links to the "Add New Company" page in Zero BS CRM
 
-### Command Palette (WordPress 6.3+)
+### Command Palette (WordPress 6.3+ in Block Editor)
 
-Press `Cmd+K` (Mac) or `Ctrl+K` (Windows/Linux) to open the command palette, then type:
+Open the **WordPress block editor** (post, page, or site editor), then press `Cmd+K` (Mac) or `Ctrl+K` (Windows/Linux) to open the command palette. Type:
 
 1. **"Zero BS CRM: Add New Contact"** - Opens the add new contact page
 2. **"Zero BS CRM: Add New Company"** - Opens the add new company page
@@ -69,7 +69,7 @@ You can search by typing "Zero BS", "Contact", "Company", or any part of the com
 No configuration needed! The shortcuts will only appear if:
 - Zero BS CRM is installed and activated
 - The current user has the appropriate capabilities (`admin_zerobs_customers` or `manage_options`)
-- Command palette commands require WordPress 6.3 or higher
+- Command palette commands require WordPress 6.3+ and the block editor
 
 ## User Capabilities
 
@@ -253,11 +253,15 @@ Yes, but you'll need to use WordPress translation filters or modify the plugin c
 
 ### Does this work on the front end?
 
-Yes, if the admin bar is visible on the front end (for logged-in users), the links will appear there as well. The command palette is available in both the admin area and front end.
+Yes, the admin bar links will appear on the front end if the admin bar is visible for logged-in users. The command palette commands are only available in the WordPress block editor (posts, pages, site editor).
 
 ### What keyboard shortcut opens the command palette?
 
-Press `Cmd+K` on Mac or `Ctrl+K` on Windows/Linux. This is the standard WordPress command palette shortcut (available in WordPress 6.3+).
+Press `Cmd+K` on Mac or `Ctrl+K` on Windows/Linux while in the WordPress block editor. This is the standard WordPress command palette shortcut (available in WordPress 6.3+).
+
+### Why don't I see the command palette commands?
+
+The command palette commands only appear in the **WordPress block editor** (when editing posts, pages, or using the site editor). They are not available in the classic WordPress admin dashboard. Make sure you're in the block editor and press `Cmd+K` or `Ctrl+K`.
 
 ## Contributing
 
