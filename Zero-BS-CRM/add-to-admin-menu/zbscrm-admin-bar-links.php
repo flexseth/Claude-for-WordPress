@@ -216,3 +216,71 @@ function zbscrm_admin_bar_links_add_admin_bar_items( $wp_admin_bar ) {
 	do_action( 'zbscrm_admin_bar_after_add_items', $wp_admin_bar );
 }
 add_action( 'admin_bar_menu', 'zbscrm_admin_bar_links_add_admin_bar_items', 100 );
+
+/**
+ * Register command palette commands for Zero BS CRM.
+ *
+ * Adds "Add New Contact" and "Add New Company" commands to the WordPress command palette.
+ *
+ * @since 1.1.0
+ *
+ * @param array $commands Existing commands.
+ * @return array Modified commands array.
+ */
+function zbscrm_admin_bar_links_register_command_palette_commands( $commands ) {
+	// Only add if Zero BS CRM is active.
+	if ( ! zbscrm_admin_bar_links_is_zbscrm_active() ) {
+		return $commands;
+	}
+
+	// Check if user has permission to access Zero BS CRM.
+	$capability = zbscrm_admin_bar_links_get_required_capability();
+	if ( ! current_user_can( $capability ) ) {
+		return $commands;
+	}
+
+	/**
+	 * Fires before adding command palette commands.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param array $commands Existing commands.
+	 */
+	do_action( 'zbscrm_admin_bar_before_add_commands', $commands );
+
+	// Add "Add New Contact" command.
+	$commands[] = array(
+		'command'     => 'zbscrm-add-contact',
+		'label'       => __( 'Zero BS CRM: Add New Contact', 'zbscrm-admin-bar-links' ),
+		'description' => __( 'Create a new contact in Zero BS CRM', 'zbscrm-admin-bar-links' ),
+		'callback'    => function() {
+			wp_safe_redirect( zbscrm_admin_bar_links_get_add_contact_url() );
+			exit;
+		},
+		'capability'  => $capability,
+	);
+
+	// Add "Add New Company" command.
+	$commands[] = array(
+		'command'     => 'zbscrm-add-company',
+		'label'       => __( 'Zero BS CRM: Add New Company', 'zbscrm-admin-bar-links' ),
+		'description' => __( 'Create a new company in Zero BS CRM', 'zbscrm-admin-bar-links' ),
+		'callback'    => function() {
+			wp_safe_redirect( zbscrm_admin_bar_links_get_add_company_url() );
+			exit;
+		},
+		'capability'  => $capability,
+	);
+
+	/**
+	 * Fires after adding command palette commands.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @param array $commands Modified commands array.
+	 */
+	do_action( 'zbscrm_admin_bar_after_add_commands', $commands );
+
+	return $commands;
+}
+add_filter( 'command_palette_commands', 'zbscrm_admin_bar_links_register_command_palette_commands' );
