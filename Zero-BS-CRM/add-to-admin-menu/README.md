@@ -1,18 +1,15 @@
 # Zero BS CRM - Add to Admin Menu
 
-A lightweight WordPress plugin that adds quick access links for "Add New Contact" and "Add New Company" to the WordPress admin bar and command palette for Zero BS CRM (Jetpack CRM).
+A lightweight WordPress plugin that adds quick access links for "Add New Contact" and "Add New Company" to the WordPress admin bar for Zero BS CRM (Jetpack CRM).
 
 ## Description
 
-This plugin enhances the WordPress admin experience when using Zero BS CRM (Jetpack CRM) by adding convenient shortcuts in the admin toolbar and command palette. Instead of navigating through multiple menu levels, users can quickly access the "Add New Contact" and "Add New Company" pages directly from the top admin bar or via keyboard shortcuts.
+This plugin enhances the WordPress admin experience when using Zero BS CRM (Jetpack CRM) by adding convenient shortcuts in the admin toolbar. Instead of navigating through multiple menu levels, users can quickly access the "Add New Contact" and "Add New Company" pages directly from the top admin bar.
 
 ### Features
 
 - ✅ Adds "Contact" link under the admin bar "New" menu
 - ✅ Adds "Company" link under the admin bar "New" menu
-- ✅ Command palette integration (WordPress 6.3+) with keyboard shortcuts
-- ✅ "Zero BS CRM: Add New Contact" command
-- ✅ "Zero BS CRM: Add New Company" command
 - ✅ Automatic dependency checking (shows warning if Zero BS CRM is not active)
 - ✅ Respects Zero BS CRM user capabilities
 - ✅ Fully translatable with i18n support
@@ -46,39 +43,23 @@ This plugin enhances the WordPress admin experience when using Zero BS CRM (Jetp
 
 ## Usage
 
-Once activated, the plugin automatically adds shortcuts in two places:
-
-### Admin Bar Links
-
-Two new items appear in the WordPress admin bar:
+Once activated, the plugin automatically adds two new items to the WordPress admin bar:
 
 1. **New → Contact** - Links to the "Add New Contact" page in Zero BS CRM
 2. **New → Company** - Links to the "Add New Company" page in Zero BS CRM
 
-### Command Palette (WordPress 6.3+ in Block Editor)
-
-Open the **WordPress block editor** (post, page, or site editor), then press `Cmd+K` (Mac) or `Ctrl+K` (Windows/Linux) to open the command palette. Type:
-
-1. **"Zero BS CRM: Add New Contact"** - Opens the add new contact page
-2. **"Zero BS CRM: Add New Company"** - Opens the add new company page
-
-You can search by typing "Zero BS", "Contact", "Company", or any part of the command name.
-
-### Requirements
-
-No configuration needed! The shortcuts will only appear if:
+No configuration needed! The links will only appear if:
 - Zero BS CRM is installed and activated
 - The current user has the appropriate capabilities (`admin_zerobs_customers` or `manage_options`)
-- Command palette commands require WordPress 6.3+ and the block editor
 
 ## User Capabilities
 
-The plugin checks for the following capabilities before displaying shortcuts:
+The plugin checks for the following capabilities before displaying the admin bar links:
 
 - `admin_zerobs_customers` (Zero BS CRM's custom capability)
 - `manage_options` (fallback for administrators)
 
-Only users with these capabilities will see the admin bar menu items and command palette commands.
+Only users with these capabilities will see the admin bar menu items.
 
 ## Hooks & Filters
 
@@ -122,26 +103,6 @@ Fires after admin bar items are added.
 
 ```php
 add_action( 'zbscrm_admin_bar_after_add_items', function( $wp_admin_bar ) {
-    // Your custom code here
-} );
-```
-
-#### `zbscrm_admin_bar_before_add_commands`
-
-Fires before command palette commands are added.
-
-```php
-add_action( 'zbscrm_admin_bar_before_add_commands', function( $commands ) {
-    // Your custom code here
-} );
-```
-
-#### `zbscrm_admin_bar_after_add_commands`
-
-Fires after command palette commands are added.
-
-```php
-add_action( 'zbscrm_admin_bar_after_add_commands', function( $commands ) {
     // Your custom code here
 } );
 ```
@@ -214,18 +175,6 @@ This plugin follows WordPress security best practices:
 2. Log in as an administrator
 3. Check that "Show Toolbar when viewing site" is enabled in your user profile
 
-### The command palette commands don't appear
-
-**Possible causes:**
-1. WordPress version is below 6.3
-2. Zero BS CRM is not installed or activated
-3. You don't have the required user capabilities
-
-**Solution:**
-1. Update to WordPress 6.3 or higher
-2. Ensure Zero BS CRM (Jetpack CRM) is active
-3. Log in as an administrator
-
 ### The links go to the wrong page
 
 **Solution:**
@@ -253,15 +202,7 @@ Yes, but you'll need to use WordPress translation filters or modify the plugin c
 
 ### Does this work on the front end?
 
-Yes, the admin bar links will appear on the front end if the admin bar is visible for logged-in users. The command palette commands are only available in the WordPress block editor (posts, pages, site editor).
-
-### What keyboard shortcut opens the command palette?
-
-Press `Cmd+K` on Mac or `Ctrl+K` on Windows/Linux while in the WordPress block editor. This is the standard WordPress command palette shortcut (available in WordPress 6.3+).
-
-### Why don't I see the command palette commands?
-
-The command palette commands only appear in the **WordPress block editor** (when editing posts, pages, or using the site editor). They are not available in the classic WordPress admin dashboard. Make sure you're in the block editor and press `Cmd+K` or `Ctrl+K`.
+Yes, if the admin bar is visible on the front end (for logged-in users), the links will appear there as well.
 
 ## Contributing
 

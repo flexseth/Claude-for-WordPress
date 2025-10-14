@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Zero BS CRM - Add to Admin Menu
  * Plugin URI: https://github.com/yourusername/zbscrm-admin-bar-links
- * Description: Adds "Add New Contact" and "Add New Company" quick links to the WordPress admin bar and command palette for Zero BS CRM (Jetpack CRM).
- * Version: 1.1.0
+ * Description: Adds "Add New Contact" and "Add New Company" quick links to the WordPress admin bar for Zero BS CRM (Jetpack CRM).
+ * Version: 1.0.1
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: Your Name
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
  */
-define( 'ZBSCRM_ADMIN_BAR_LINKS_VERSION', '1.1.0' );
+define( 'ZBSCRM_ADMIN_BAR_LINKS_VERSION', '1.0.1' );
 
 /**
  * Plugin base name.
@@ -216,60 +216,3 @@ function zbscrm_admin_bar_links_add_admin_bar_items( $wp_admin_bar ) {
 	do_action( 'zbscrm_admin_bar_after_add_items', $wp_admin_bar );
 }
 add_action( 'admin_bar_menu', 'zbscrm_admin_bar_links_add_admin_bar_items', 100 );
-
-/**
- * Enqueue command palette JavaScript for the block editor.
- *
- * Registers commands for adding new contacts and companies to the WordPress command palette.
- *
- * @since 1.1.0
- * @return void
- */
-function zbscrm_admin_bar_links_enqueue_command_palette_scripts() {
-	// Only add if Zero BS CRM is active.
-	if ( ! zbscrm_admin_bar_links_is_zbscrm_active() ) {
-		return;
-	}
-
-	// Check if user has permission to access Zero BS CRM.
-	$capability = zbscrm_admin_bar_links_get_required_capability();
-	if ( ! current_user_can( $capability ) ) {
-		return;
-	}
-
-	/**
-	 * Fires before enqueuing command palette scripts.
-	 *
-	 * @since 1.1.0
-	 */
-	do_action( 'zbscrm_admin_bar_before_enqueue_command_scripts' );
-
-	// Enqueue the command palette JavaScript.
-	wp_enqueue_script(
-		'zbscrm-command-palette',
-		ZBSCRM_ADMIN_BAR_LINKS_URL . 'js/command-palette.js',
-		array( 'wp-commands', 'wp-element', 'wp-dom-ready' ),
-		ZBSCRM_ADMIN_BAR_LINKS_VERSION,
-		true
-	);
-
-	// Localize script with data.
-	wp_localize_script(
-		'zbscrm-command-palette',
-		'zbscrmCommandPalette',
-		array(
-			'addContactLabel' => __( 'Zero BS CRM: Add New Contact', 'zbscrm-admin-bar-links' ),
-			'addCompanyLabel' => __( 'Zero BS CRM: Add New Company', 'zbscrm-admin-bar-links' ),
-			'addContactUrl'   => zbscrm_admin_bar_links_get_add_contact_url(),
-			'addCompanyUrl'   => zbscrm_admin_bar_links_get_add_company_url(),
-		)
-	);
-
-	/**
-	 * Fires after enqueuing command palette scripts.
-	 *
-	 * @since 1.1.0
-	 */
-	do_action( 'zbscrm_admin_bar_after_enqueue_command_scripts' );
-}
-add_action( 'enqueue_block_editor_assets', 'zbscrm_admin_bar_links_enqueue_command_palette_scripts' );
