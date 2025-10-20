@@ -41,7 +41,6 @@ Scaffold a block using [`@wordpress/create-block`](https://developer.wordpress.o
 Creating a plugin will scaffold a standard WordPress plugin structure.
 - Template: (choose one: settings page, shortcode, widget, custom post type, custom taxonomy, REST API endpoint, block hooks, IAPI, block bindings, inner blocks, supports, API, integration, other) (default: settings page)
 
-## Block supports
 
 ## Must haves - project guidelines
 Think first, then create the project plan. We will track project progress using GitHub Issues.
