@@ -1,8 +1,12 @@
 ## Claude for WordPress
 Create plugins with this suite of tools from Claude Code.
 
-## Prompt me for the following information:
-This will help to build the plugin bootstrap and `readme.txt` file.
+## Project discovery
+> Gather requirements for the plugin to be created.
+- Scaffold plugin files based on type (block, plugin, or both)
+- Include license file (GPLv2 or later)
+- Reference necessary WordPress Core components
+- Update the plugin bootstrap and `readme.txt` file based on user input
 
 ### Plugin type
 > prompt for plugin header
@@ -29,17 +33,20 @@ If the selection is "block" or "both" - create the prompts for `create-block` be
 > User selected "block" or "both" for plugin type
 Scaffold a block using [`@wordpress/create-block`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/).
 
+Block specific [plugin guidelines](https://developer.wordpress.org/plugins/wordpress-org/block-specific-plugin-guidelines/)
+
 - [Static or dynamic rendering?](https://developer.wordpress.org/block-editor/getting-started/fundamentals/static-dynamic-rendering/) (choose one: static, dynamic) (default: dynamic)
 - Block category (choose one: common, formatting, layout, widgets, embed, theme, reusable) (default: common)
 - Block icon (default: admin-plugins)
 - Block keywords (comma separated) (default: wpclaude, custom block)
 - Block description (default: A custom block created with Claude)
 - Block supports - comma separated list of supports (choose from: align, anchor, className, customClassName, html, inserter, multiple, reusable, spacing, typography) (default: align, className, html, inserter, multiple)
+- Requires plugins (comma separated) (default: none)
 
 ## Creating a plugin
 > User selected "plugin" for plugin type
 Creating a plugin will scaffold a standard WordPress plugin structure.
-- Template: (choose one: settings page, shortcode, widget, custom post type, custom taxonomy, REST API endpoint, block hooks, IAPI, block bindings, inner blocks, supports, API, integration, other) (default: settings page)
+- Template: (choose one: settings page, shortcode, widget, custom post type, custom taxonomy, REST API endpoint, data store, block hooks, IAPI, HTML Tag Processor, block bindings, inner blocks, supports, API, integration, other) (default: settings page)
 
 
 ## Must haves - project guidelines
@@ -47,9 +54,9 @@ Think first, then create the project plan. We will track project progress using 
 The project roadmap should lay out timeframes to completion, based on how many tokens it takes Claude to research features. 
 This suite will create the project management and architecture for building plugins, blocks, etc.
 
-- Scaffold the block using the `@wordpress/create-block` package
-- Create all components based on WordPress Core components
-- Do not install or use third party libraries unless absolutely necessary
+- Scaffold the block using the `@wordpress/create-block` package[LINK]
+- Create all components based on WordPress Core components[LINK]
+- Utilize[ built in scripts and JS libraries from WordPress Core](https://developer.wordpress.org/reference/functions/wp_enqueue_script/#default-scripts-and-js-libraries-included-and-registered-by-wordpress)
 - Use functional components instead of class components for React and PHP
 - Follow WordPress coding standards (PHP, JS, CSS)
 - Use ESNext and modern JavaScript practices
@@ -93,18 +100,18 @@ More information below.
 - Escape all outputs
 - Should pass the Plugin Check Plugin
 - Use functional JS (React)
-- Follow WordPress database interaction best practices (using $wpdb)
-- Do not create custom database tables
+- Do not create custom database tables - instead post meta (Custom Fields), options API, custom taxonomies, or custom post types
+- Use $wpdb for custom queries
 - Use transients for caching
 - Ensure GDPR compliance
 - Provide support for REST API
 - Ensure compatibility with popular page builders (Elementor, Beaver Builder, Divi Builder)
 - Only load JavaScript when necessary
 - Only load CSS when necessary
-- Use lazy loading for images
+- Make lazy loading available for images
 - Optimize for performance (minimize HTTP requests, use efficient queries)
-- Ensure SEO best practices
 - Provide hooks for custom functionality
+- Ensure SEO best practices
 
 ## Future features
 - Create themes
