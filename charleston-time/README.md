@@ -4,11 +4,11 @@ A WordPress Gutenberg block that displays the current time in Charleston, South 
 
 ## Description
 
-This dynamic block shows real-time updates of the current time in Charleston, SC, formatted as `10:35AM` or `3:25PM`. The time updates every second in both the editor and on the front-end, providing a live clock experience.
+This dynamic block shows real-time updates of the current time in Charleston, SC, formatted as `10:35AM` or `3:25PM`. The time updates every minute in both the editor and on the front-end, providing a live clock experience.
 
 ## Features
 
-- **Real-time Updates**: Time refreshes every second
+- **Real-time Updates**: Time refreshes every minute
 - **Charleston, SC Timezone**: Uses America/New_York timezone (EST/EDT)
 - **Custom Format**: Displays in 12-hour format (e.g., `10:35AM`, `3:25PM`)
 - **Dynamic Rendering**: JavaScript-based rendering on both editor and front-end
@@ -50,7 +50,7 @@ This dynamic block shows real-time updates of the current time in Charleston, SC
 3. Search for **"Charleston Time"** or look for the clock icon
 4. Insert the block
 
-The time will immediately display and update every second.
+The time will immediately display and update every minute.
 
 ### Block Settings
 
@@ -172,7 +172,7 @@ export default function Edit() {
     useEffect(() => {
         const interval = setInterval(() => {
             setTime(getCharlestonTime());
-        }, 1000);
+        }, 60000); // Update every minute
 
         return () => clearInterval(interval);
     }, []);
@@ -189,7 +189,7 @@ export default function Edit() {
 
 **Key Features:**
 - **useState**: Manages the time state
-- **useEffect**: Sets up interval to update every second
+- **useEffect**: Sets up interval to update every minute (60000ms)
 - **Cleanup**: Clears interval when component unmounts
 - **useBlockProps**: Adds WordPress block wrapper attributes
 
@@ -256,14 +256,14 @@ function updateCharlestonTime() {
 
 document.addEventListener('DOMContentLoaded', () => {
     updateCharlestonTime();
-    setInterval(updateCharlestonTime, 1000);
+    setInterval(updateCharlestonTime, 60000); // Update every minute
 });
 ```
 
 **Process:**
 1. Waits for DOM to load
 2. Immediately updates time
-3. Sets interval to update every 1000ms (1 second)
+3. Sets interval to update every 60000ms (1 minute)
 4. Updates all instances of the block on the page
 
 #### 7. Styling (`style.scss`)
@@ -431,4 +431,4 @@ For issues or questions about this block, please refer to the WordPress Block Ed
 - Real-time Charleston, SC time display
 - Dynamic block with JavaScript rendering
 - Custom purple gradient styling
-- Updates every second in editor and front-end
+- Updates every minute in editor and front-end

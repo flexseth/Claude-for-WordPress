@@ -46,6 +46,6 @@ function updateCharlestonTime() {
 // Initialize on page load
 document.addEventListener( 'DOMContentLoaded', () => {
 	updateCharlestonTime();
-	// Update every second
-	setInterval( updateCharlestonTime, 1000 );
+	// Update every minute
+	setInterval( updateCharlestonTime, 60000 ); // 60000ms = 1 minute
 } );

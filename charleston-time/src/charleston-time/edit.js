@@ -63,7 +63,7 @@ export default function Edit() {
 	useEffect( () => {
 		const interval = setInterval( () => {
 			setTime( getCharlestonTime() );
-		}, 1000 );
+		}, 60000 ); // Update every minute (60000ms)
 
 		return () => clearInterval( interval );
 	}, [] );
