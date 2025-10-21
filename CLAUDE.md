@@ -1,17 +1,40 @@
-## Claude for WordPress
+# intro
 Create plugins with this suite of tools from Claude Code.
+
+Read `SITEBUILDER.md` for project overview.
+
+# prompt standards
+- `INSTRUCTIONS.md` - RECORD - Chat requests: Record all prompts, summary of action steps, and responses
+- `MEMORIES.md` - REMEMBER - save context window as memories
+- `PLAN.md` - PLAN FIRST - before coding, create a project plan with milestones and tasks.
+- REPLACEMENT - Store prompt values as variables for reuse. Access with `[variable-name]`.
+- CODE - `src` folder for source code.
+- ASSETS - `assets` folder for images, icons, styles, etc.
+- CONFIG - `config` folder for configuration files.
+- DOCUMENT - `docs` folder for larger projects, otherwise use Markdown files.
+- TEST - `tests` folder for unit, integration, and end-to-end tests.
+- BRANCHES - does a prompt request a feature? Consider creating a GitHub branch for it.
+- ASK QUESTIONS - if unclear about requirements, ask for clarification.
+- REVIEW - use code review tools like GitHub PRs to ensure quality. Copilot can help with this.
+- VERSIONING - if significant changes have been pushed, change log, update plugin header and readme version.
+
+# About Claude Code for WordPress
+- [Claude Code documentation](https://docs.claude.com/en/docs/claude-code/)
 
 ## Project discovery
 > Gather requirements for the plugin to be created.
+
 - Scaffold plugin files based on type (block, plugin, or both)
 - Include license file (GPLv2 or later)
 - Reference necessary WordPress Core components
-- Update the plugin bootstrap and `readme.txt` file based on user input
+- Update the plugin bootstrap (.php) and [`readme.txt`](https://developer.wordpress.org/plugins/wordpress-org/how-your-readme-txt-works/) file based on user input
 
 ### Plugin type
+Project discovery
+
 > prompt for plugin header
 
-- Plugin name (default: WPClaude)
+- Plugin name (default: Sitebuilder Assets)
 - Plugin description (default: Short description) - must be less than 150 characters
 - Plugin version (default: 0.1.0)
 - Plugin slug: A URL-friendly version of the plugin name (lowercase, no spaces, hyphens instead of spaces)
@@ -32,6 +55,9 @@ If the selection is "block" or "both" - create the prompts for `create-block` be
 ## Custom Gutenberg Block
 > User selected "block" or "both" for plugin type
 Scaffold a block using [`@wordpress/create-block`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/).
+
+Syntax
+npx @wordpress/create-block@latest <block-name> [options]
 
 Block specific [plugin guidelines](https://developer.wordpress.org/plugins/wordpress-org/block-specific-plugin-guidelines/)
 
