@@ -1,8 +1,8 @@
 {
 	"name": "charleston-time",
-	"version": "0.1.0",
-	"description": "Example block scaffolded with Create Block tool.",
-	"author": "The WordPress Contributors",
+	"version": "1.0.0",
+	"description": "Displays current time in Charleston, South Carolina with real-time updates.",
+	"author": "Flex Perception",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {

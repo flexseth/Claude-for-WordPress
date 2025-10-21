@@ -1,19 +1,25 @@
 === Charleston Time ===
-Contributors:      The WordPress Contributors
-Tags:              block
+Contributors:      flexseth
+Tags:              block, time, clock, charleston, timezone
 Tested up to:      6.7
-Stable tag:        0.1.0
+Stable tag:        1.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Example block scaffolded with Create Block tool.
+Displays current time in Charleston, South Carolina with real-time updates.
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+Charleston Time is a dynamic Gutenberg block that displays the current time in Charleston, South Carolina (Eastern Time Zone). The block automatically updates every minute to show accurate local time in a beautiful, modern interface.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+**Features:**
+* Real-time updates every minute
+* Charleston, SC timezone (America/New_York - EST/EDT)
+* 12-hour format display (e.g., 10:35AM, 3:25PM)
+* Beautiful purple gradient design
+* Fully responsive
+* Works in both editor and front-end
+* No external dependencies
 
 == Installation ==
 
@@ -45,8 +51,18 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 == Changelog ==
 
+= 1.0.0 =
+* Stable release
+* Added comprehensive development documentation (RATIONALE.md)
+* Complete feature set with real-time updates every minute
+* Production-ready code following WordPress standards
+
+= 0.1.1 =
+* Changed update frequency from every second to every minute
+* Improved performance
+
 = 0.1.0 =
-* Release
+* Initial release
 
 == Arbitrary section ==
 

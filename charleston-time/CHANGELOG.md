@@ -5,6 +5,22 @@ All notable changes to the Charleston Time block will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0] - 2025-10-21
+
+### Added
+- RATIONALE.md: Comprehensive documentation of development process, design decisions, and technical rationale
+- HTML mockup file for visual preview
+
+### Changed
+- Version bump to 1.0.0 (stable release)
+- Updated all documentation to reference RATIONALE.md
+
+### Documentation
+- Complete development rationale and decision-making process
+- Technical challenges and solutions
+- WordPress standards compliance details
+- Future enhancement ideas
+
 ## [0.1.1] - 2025-10-21
 
 ### Changed
