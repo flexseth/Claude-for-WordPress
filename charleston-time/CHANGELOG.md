@@ -9,21 +9,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - RATIONALE.md: Comprehensive documentation of development process, design decisions, and technical rationale
-- HTML mockup file for visual preview
+- HTML mockup file (mockup.html) for visual preview and testing
 - Screenshot (screenshot.png) added to README
 - COMP.html: Full rendered page HTML for reference
+- .wp-env.json configuration for local WordPress environment
+- .gitignore entries for build/ directory and node_modules/
 
 ### Changed
 - Version bump to 1.0.0 (stable release)
 - Updated all documentation to reference RATIONALE.md
 - README now displays screenshot at top
+- Updated plugin header description from "Example block scaffolded..." to "Displays current time in Charleston, South Carolina with real-time updates"
+- Updated package.json description and author to "Flex Perception"
+- Updated readme.txt with comprehensive feature list and proper WordPress.org formatting
+- Updated contributor from "The WordPress Contributors" to "flexseth"
+- Added proper tags to readme.txt: block, time, clock, charleston, timezone
 
 ### Documentation
 - Complete development rationale and decision-making process
-- Technical challenges and solutions
+- Technical challenges and solutions documented
 - WordPress standards compliance details
 - Future enhancement ideas
 - Visual representation with screenshot
+- README includes full version history in Changelog section
+- All code properly commented following WordPress standards
+
+### Metadata
+- Plugin version: 1.0.0
+- Block version: 1.0.0
+- Package version: 1.0.0
+- All version numbers synchronized across files
 
 ## [0.1.1] - 2025-10-21
 
