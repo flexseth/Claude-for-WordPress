@@ -10,16 +10,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - RATIONALE.md: Comprehensive documentation of development process, design decisions, and technical rationale
 - HTML mockup file for visual preview
+- Screenshot (screenshot.png) added to README
+- COMP.html: Full rendered page HTML for reference
 
 ### Changed
 - Version bump to 1.0.0 (stable release)
 - Updated all documentation to reference RATIONALE.md
+- README now displays screenshot at top
 
 ### Documentation
 - Complete development rationale and decision-making process
 - Technical challenges and solutions
 - WordPress standards compliance details
 - Future enhancement ideas
+- Visual representation with screenshot
 
 ## [0.1.1] - 2025-10-21
 
