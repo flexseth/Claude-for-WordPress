@@ -58,4 +58,7 @@ The command should follow the structure below:
 ## post-install
 After scaffolding, refer to the post-installation steps in USAGE.md for further instructions on adding features, fixing issues, updating documentation, and running tests.
 
-Symbolic link the newly created plugin directory to /Users/seth/Studio/demo/wp-content/plugins
+- Symbolic link the newly created plugin directory to /Users/seth/Studio/demo/wp-content/plugins
+- Run `npm run start` in the plugin directory to start the development server.
+- Update CHANGELOG and README files as needed.
+- Prompt me for testing: "Test the plugin and report back."
