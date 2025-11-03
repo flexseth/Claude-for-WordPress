@@ -10,7 +10,7 @@ Each command uses the format: `@command.md <TASK_DESCRIPTION>`
 
 ## 1. ask.md - Architecture Consultation Command
 
-```markdown
+
 ## Usage
 `@ask.md <TECHNICAL_QUESTION>`
 
@@ -45,13 +45,12 @@ You are a Senior Systems Architect providing expert consultation and architectur
 
 ## Note
 This command focuses on architectural consultation and strategic guidance. For implementation details and code generation, use @code.md instead.
-```
+
 
 ---
 
 ## 2. code.md - Code Implementation Command
 
-```markdown
 ## Usage
 `@code.md <FEATURE_DESCRIPTION>`
 
@@ -83,13 +82,20 @@ You are the Development Coordinator directing four coding specialists:
 3. **Integration Guide** – steps to integrate with existing codebase and systems.
 4. **Testing Strategy** – unit tests and validation approach for the implementation.
 5. **Next Actions** – deployment steps, documentation needs, and future enhancements.
-```
+
 
 ---
 
 ## 3. debug.md - Debug Analysis Command
 
-```markdown
+## Usage
+`@debug.md <ERROR_DESCRIPTION>`
+
+## Context
+- Error description: $ARGUMENTS
+- Relevant code files will be referenced using @ file syntax as needed.
+- Error logs and stack traces will be analyzed in context.
+
 ## Usage
 `@debug.md <ERROR_DESCRIPTION>`
 
@@ -121,13 +127,11 @@ You are the Debug Coordinator orchestrating four specialist debugging agents:
 3. **Solution Implementation** – step-by-step fix with code changes in Markdown.
 4. **Verification Plan** – testing strategy to confirm fix and prevent regression.
 5. **Next Actions** – follow-up items for monitoring and prevention.
-```
 
 ---
 
 ## 4. test.md - Testing Strategy Command
 
-```markdown
 ## Usage
 `@test.md <COMPONENT_OR_FEATURE>`
 
@@ -159,13 +163,11 @@ You are the Test Strategy Coordinator managing four testing specialists:
 3. **Coverage Analysis** – gap identification and priority recommendations.
 4. **Execution Plan** – test running strategy and CI/CD integration.
 5. **Next Actions** – test maintenance and expansion roadmap.
-```
 
 ---
 
 ## 5. review.md - Code Review Command
 
-```markdown
 ## Usage
 `@review.md <CODE_SCOPE>`
 
@@ -197,13 +199,12 @@ You are the Code Review Coordinator directing four review specialists:
 3. **Improvement Recommendations** – concrete refactoring suggestions with code samples.
 4. **Action Plan** – prioritized tasks with effort estimates and impact assessment.
 5. **Next Actions** – follow-up reviews and monitoring requirements.
-```
 
 ---
 
 ## 6. optimize.md - Performance Optimization Command
 
-```markdown
+
 ## Usage
 `@optimize.md <PERFORMANCE_TARGET>`
 
@@ -235,13 +236,12 @@ You are the Performance Optimization Coordinator leading four optimization exper
 3. **Implementation Plan** – code changes with performance impact estimates.
 4. **Measurement Framework** – benchmarking and monitoring setup.
 5. **Next Actions** – continuous optimization and monitoring requirements.
-```
 
 ---
 
 ## 7. refactor.md - Code Refactoring Command
 
-```markdown
+
 ## Usage
 `@refactor.md <REFACTOR_SCOPE>`
 
@@ -273,13 +273,11 @@ You are the Refactoring Coordinator orchestrating four refactoring specialists:
 3. **Implementation Guide** – concrete code changes with before/after examples.
 4. **Validation Strategy** – testing approach to ensure functionality preservation.
 5. **Next Actions** – monitoring plan and future refactoring opportunities.
-```
 
 ---
 
 ## 8. deploy-check.md - Deployment Readiness Command
 
-```markdown
 ## Usage
 `@deploy-check.md <DEPLOYMENT_TARGET>`
 
@@ -311,7 +309,7 @@ You are the Deployment Readiness Coordinator managing four deployment specialist
 3. **Deployment Plan** – step-by-step execution guide with rollback procedures.
 4. **Monitoring Strategy** – post-deployment validation and health checks.
 5. **Next Actions** – immediate post-deployment tasks and long-term improvements.
-```
+
 
 ---
 
@@ -413,7 +411,7 @@ You are the Deployment Readiness Coordinator managing four deployment specialist
    ```
 
 2. **Save each command** as a separate `.md` file in the `.claude/commands` directory
-<!-- 
+
 3. **Use commands** with natural language descriptions:
    ```bash
    @ask.md How should I architect a real-time chat system?
