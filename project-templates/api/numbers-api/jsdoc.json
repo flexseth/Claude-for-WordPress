@@ -1,0 +1,28 @@
+{
+	"plugins": ["plugins/markdown", "node_modules/jsdoc-babel"],
+	"babel": {
+		"extensions": ["js", "jsx"],
+		"babelrc": false,
+		"presets": [["@babel/preset-env", { "targets": { "node": "current" } }], "@babel/preset-react"]
+	},
+	"source": {
+		"include": ["src"],
+		"includePattern": ".+\\.js(doc|x)?$",
+		"excludePattern": "(node_modules/|docs|build)"
+	},
+	"sourceType": "module",
+	"tags": {
+		"allowUnknownTags": true,
+		"dictionaries": ["jsdoc", "closure"]
+	},
+	"templates": {
+		"cleverLinks": false,
+		"monospaceLinks": false
+	},
+	"opts": {
+		"destination": "./docs/api",
+		"encoding": "utf8",
+		"recurse": true,
+		"template": "./node_modules/docdash"
+	}
+}

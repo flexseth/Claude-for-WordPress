@@ -1,0 +1,51 @@
+/**
+ * Styles for Google Charts Block.
+ *
+ * These styles are applied both on the front-end and in the editor.
+ *
+ * @package FlexPerception
+ */
+
+.wp-block-flex-perception-google-charts-block {
+	margin: 1em 0;
+	padding: 1em;
+
+	.google-charts-block__chart {
+		margin: 0 auto;
+		min-height: 200px;
+
+		svg {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.google-charts-block__export {
+		margin-top: 1em;
+		text-align: center;
+
+		.google-charts-block__export-btn {
+			background-color: #0073aa;
+			border: none;
+			border-radius: 4px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 14px;
+			padding: 10px 20px;
+			transition: background-color 0.2s ease;
+
+			&:hover {
+				background-color: #005177;
+			}
+
+			&:focus {
+				outline: 2px solid #0073aa;
+				outline-offset: 2px;
+			}
+
+			&:active {
+				background-color: #003f5e;
+			}
+		}
+	}
+}

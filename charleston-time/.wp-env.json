@@ -1,0 +1,14 @@
+{
+  "core": "WordPress/WordPress#6.7",
+  "plugins": [
+    "."
+  ],
+  "port": 8888,
+  "env": {
+    "development": {
+      "themes": [
+        "WordPress/twentytwentyfour"
+      ]
+    }
+  }
+}

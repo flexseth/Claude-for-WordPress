@@ -1,0 +1,23 @@
+/**
+ * Editor-only styles for Google Charts Block.
+ *
+ * These styles are applied only in the block editor.
+ *
+ * @package FlexPerception
+ */
+
+.wp-block-flex-perception-google-charts-block {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background-color: #f9f9f9;
+
+	.google-charts-block__chart {
+		background-color: #fff;
+		border-radius: 4px;
+	}
+
+	.components-placeholder {
+		min-height: 200px;
+		background-color: #fff;
+	}
+}

@@ -1,0 +1,74 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "flex-perception/google-charts-block",
+	"version": "0.1.0",
+	"title": "Google Charts Block",
+	"category": "widgets",
+	"icon": "chart-pie",
+	"description": "Display customizable Google Charts pie charts with your data.",
+	"keywords": [
+		"chart",
+		"google charts",
+		"pie chart",
+		"data visualization"
+	],
+	"example": {},
+	"attributes": {
+		"chartTitle": {
+			"type": "string",
+			"default": "Sample Pie Chart"
+		},
+		"chartData": {
+			"type": "array",
+			"default": [
+				{
+					"label": "Product A",
+					"value": 35
+				},
+				{
+					"label": "Product B",
+					"value": 25
+				},
+				{
+					"label": "Product C",
+					"value": 20
+				},
+				{
+					"label": "Product D",
+					"value": 20
+				}
+			]
+		},
+		"colorScheme": {
+			"type": "string",
+			"default": "default"
+		},
+		"chartWidth": {
+			"type": "number",
+			"default": 100
+		},
+		"chartHeight": {
+			"type": "number",
+			"default": 400
+		},
+		"enableExport": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": true,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"textdomain": "google-charts-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}
