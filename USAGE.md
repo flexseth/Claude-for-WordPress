@@ -126,16 +126,7 @@ When requesting new features:
 - Each commit includes attribution to Claude
 
 ### Pull Requests
-Use the command:
-```
-create a pull request
-```
-
-Claude will:
-1. Analyze all changes since branch diverged
-2. Create comprehensive PR summary
-3. Include test plan checklist
-4. Return the PR URL
+Handled by the Copilot Contributor agent.
 
 ## Memory and Context Management
 
