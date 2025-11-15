@@ -1,0 +1,52 @@
+name: Copilot Coding Agent (DIY)
+
+on:
+  workflow_dispatch:
+    inputs:
+      run:
+        description: 'Perform real run (true) or dry-run (false)'
+        required: false
+        default: 'false'
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  checks: write
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'issues'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq git curl gh
+
+      - name: Run agent runner
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          chmod +x ./scripts/agent-runner.sh
+          ISSUE_NUMBER=""
+          if [ "${{ github.event_name }}" = "issues" ]; then
+            ISSUE_NUMBER="${{ github.event.issue.number }}"
+            # label-triggered runs default to dry-run
+            ./scripts/agent-runner.sh --issue-number "$ISSUE_NUMBER" --dry-run
+          else
+            RUN_INPUT="${{ github.event.inputs.run || 'false' }}"
+            if [ "$RUN_INPUT" = "true" ]; then
+              ./scripts/agent-runner.sh --issue-number "$ISSUE_NUMBER" --dry-run=false
+            else
+              ./scripts/agent-runner.sh --issue-number "$ISSUE_NUMBER" --dry-run
+            fi
+          fi
