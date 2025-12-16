@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 2400" width="1200" height="2400">
+  <defs>
+    <style>
+      .title { font: bold 36px sans-serif; fill: #0f172a; }
+      .subtitle { font: bold 24px sans-serif; fill: #1e293b; }
+      .section-title { font: bold 20px sans-serif; fill: #0f172a; }
+      .command-name { font: bold 16px monospace; fill: #000000; }
+      .description { font: 14px sans-serif; fill: #1e293b; }
+      .small-text { font: 12px sans-serif; fill: #334155; }
+      .category-label { font: bold 16px sans-serif; fill: #000000; }
+
+      .card { fill: #ffffff; stroke: #94a3b8; stroke-width: 3; }
+      .command-card { fill: #e0f2fe; stroke: #0369a1; stroke-width: 3; }
+      .agent-card { fill: #dcfce7; stroke: #15803d; stroke-width: 3; }
+
+      .architecture-bg { fill: #0ea5e9; }
+      .development-bg { fill: #10b981; }
+      .quality-bg { fill: #ec4899; }
+      .operations-bg { fill: #8b5cf6; }
+      .agents-bg { fill: #10b981; }
+
+      .icon-arch { fill: #0369a1; }
+      .icon-dev { fill: #15803d; }
+      .icon-quality { fill: #be185d; }
+      .icon-ops { fill: #6d28d9; }
+      .icon-agent { fill: #15803d; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="2400" fill="#f9fafb"/>
+
+  <!-- Header -->
+  <rect width="1200" height="120" fill="#1e40af" opacity="0.95"/>
+  <text x="600" y="55" class="title" text-anchor="middle" fill="#ffffff">Claude Code Development Suite</text>
+  <text x="600" y="90" class="subtitle" text-anchor="middle" fill="#bfdbfe">WordPress Plugin and Block Development Tools</text>
+
+  <!-- Introduction -->
+  <rect x="50" y="150" width="1100" height="100" class="card" rx="10"/>
+  <text x="600" y="180" class="section-title" text-anchor="middle">Quick Start Guide</text>
+  <text x="100" y="210" class="description">Commands: Use @command.md &lt;DESCRIPTION&gt; to trigger specialized workflows</text>
+  <text x="100" y="235" class="description">Agents: Specialized AI assistants for WordPress development tasks</text>
+
+  <!-- COMMANDS SECTION -->
+  <text x="100" y="290" class="subtitle">📋 Claude Commands (.claude/commands/)</text>
+
+  <!-- Architecture & Design Category -->
+  <rect x="50" y="310" width="1100" height="180" class="card" rx="10"/>
+  <rect x="50" y="310" width="1100" height="40" class="architecture-bg" rx="10"/>
+  <circle cx="80" cy="330" r="12" class="icon-arch"/>
+  <text x="100" y="336" class="category-label">🏗️ ARCHITECTURE &amp; DESIGN</text>
+
+  <rect x="70" y="370" width="1040" height="105" class="command-card" rx="8"/>
+  <text x="90" y="395" class="command-name">@ask.md &lt;TECHNICAL_QUESTION&gt;</text>
+  <text x="90" y="420" class="description">Strategic architectural consultation and technical guidance</text>
+  <text x="90" y="440" class="small-text">• Systems Designer • Technology Strategist • Scalability Consultant • Risk Analyst</text>
+  <text x="90" y="460" class="small-text">Use for: Architecture decisions, technology choices, system design patterns, scalability planning</text>
+
+  <!-- Development Category -->
+  <rect x="50" y="510" width="1100" height="460" class="card" rx="10"/>
+  <rect x="50" y="510" width="1100" height="40" class="development-bg" rx="10"/>
+  <circle cx="80" cy="530" r="12" class="icon-dev"/>
+  <text x="100" y="536" class="category-label">💻 DEVELOPMENT</text>
+
+  <!-- Code Command -->
+  <rect x="70" y="570" width="1040" height="105" class="command-card" rx="8"/>
+  <text x="90" y="595" class="command-name">@code.md &lt;FEATURE_DESCRIPTION&gt;</text>
+  <text x="90" y="620" class="description">Feature implementation and code generation</text>
+  <text x="90" y="640" class="small-text">• Architect Agent • Implementation Engineer • Integration Specialist • Code Reviewer</text>
+  <text x="90" y="660" class="small-text">Use for: Building new features, implementing functionality, writing clean production code</text>
+
+  <!-- Debug Command -->
+  <rect x="70" y="695" width="1040" height="105" class="command-card" rx="8"/>
+  <text x="90" y="720" class="command-name">@debug.md &lt;ERROR_DESCRIPTION&gt;</text>
+  <text x="90" y="745" class="description">Bug analysis and problem solving</text>
+  <text x="90" y="765" class="small-text">• Error Analyzer • Code Inspector • Environment Checker • Fix Strategist</text>
+  <text x="90" y="785" class="small-text">Use for: Troubleshooting errors, root cause analysis, debugging complex issues</text>
+
+  <!-- Refactor Command -->
+  <rect x="70" y="820" width="1040" height="105" class="command-card" rx="8"/>
+  <text x="90" y="845" class="command-name">@refactor.md &lt;REFACTOR_SCOPE&gt;</text>
+  <text x="90" y="870" class="description">Code improvement and restructuring</text>
+  <text x="90" y="890" class="small-text">• Structure Analyst • Code Surgeon • Design Pattern Expert • Quality Validator</text>
+  <text x="90" y="910" class="small-text">Use for: Code cleanup, technical debt reduction, design pattern implementation</text>
+
+  <!-- Quality Assurance Category -->
+  <rect x="50" y="990" width="1100" height="460" class="card" rx="10"/>
+  <rect x="50" y="990" width="1100" height="40" class="quality-bg" rx="10"/>
+  <circle cx="80" cy="1010" r="12" class="icon-quality"/>
+  <text x="100" y="1016" class="category-label">🔍 QUALITY ASSURANCE</text>
+
+  <!-- Test Command -->
+  <rect x="70" y="1050" width="1040" height="105" class="command-card" rx="8"/>
+  <text x="90" y="1075" class="command-name">@test.md &lt;COMPONENT_OR_FEATURE&gt;</text>
+  <text x="90" y="1100" class="description">Testing strategy and test generation</text>
+  <text x="90" y="1120" class="small-text">• Test Architect • Unit Test Specialist • Integration Test Engineer • Quality Validator</text>
+  <text x="90" y="1140" class="small-text">Use for: Creating test suites, test coverage analysis, quality validation</text>
+
+  <!-- Review Command -->
+  <rect x="70" y="1175" width="1040" height="105" class="command-card" rx="8"/>
+  <text x="90" y="1200" class="command-name">@review.md &lt;CODE_SCOPE&gt;</text>
+  <text x="90" y="1225" class="description">Code quality and security review</text>
+  <text x="90" y="1245" class="small-text">• Quality Auditor • Security Analyst • Performance Reviewer • Architecture Assessor</text>
+  <text x="90" y="1265" class="small-text">Use for: Code reviews, security audits, quality assessment, architecture validation</text>
+
+  <!-- Optimize Command -->
+  <rect x="70" y="1300" width="1040" height="105" class="command-card" rx="8"/>
+  <text x="90" y="1325" class="command-name">@optimize.md &lt;PERFORMANCE_TARGET&gt;</text>
+  <text x="90" y="1350" class="description">Performance analysis and optimization</text>
+  <text x="90" y="1370" class="small-text">• Profiler Analyst • Algorithm Engineer • Resource Manager • Scalability Architect</text>
+  <text x="90" y="1390" class="small-text">Use for: Performance tuning, bottleneck identification, resource optimization</text>
+
+  <!-- Operations Category -->
+  <rect x="50" y="1470" width="1100" height="180" class="card" rx="10"/>
+  <rect x="50" y="1470" width="1100" height="40" class="operations-bg" rx="10"/>
+  <circle cx="80" cy="1490" r="12" class="icon-ops"/>
+  <text x="100" y="1496" class="category-label">🚀 OPERATIONS</text>
+
+  <rect x="70" y="1530" width="1040" height="105" class="command-card" rx="8"/>
+  <text x="90" y="1555" class="command-name">@deploy-check.md &lt;DEPLOYMENT_TARGET&gt;</text>
+  <text x="90" y="1580" class="description">Deployment readiness and validation</text>
+  <text x="90" y="1600" class="small-text">• Quality Assurance Agent • Security Auditor • Operations Engineer • Risk Assessor</text>
+  <text x="90" y="1620" class="small-text">Use for: Pre-deployment checks, production readiness, deployment planning</text>
+
+  <!-- WordPress Plugin Command -->
+  <rect x="50" y="1670" width="1100" height="180" class="card" rx="10"/>
+  <rect x="50" y="1670" width="1100" height="40" class="development-bg" rx="10"/>
+  <circle cx="80" cy="1690" r="12" class="icon-dev"/>
+  <text x="100" y="1696" class="category-label">🔌 WORDPRESS DEVELOPMENT</text>
+
+  <rect x="70" y="1730" width="1040" height="105" class="command-card" rx="8"/>
+  <text x="90" y="1755" class="command-name">/wp-plugin &lt;DESCRIPTION&gt;</text>
+  <text x="90" y="1780" class="description">WordPress plugin development following all WordPress standards</text>
+  <text x="90" y="1800" class="small-text">Enforces: WordPress Coding Standards, Security, Accessibility, i18n, Performance, Testing</text>
+  <text x="90" y="1820" class="small-text">Use for: Creating WordPress plugins with complete compliance and best practices</text>
+
+  <!-- AGENTS SECTION -->
+  <text x="100" y="1890" class="subtitle">🤖 Development Agents</text>
+
+  <!-- Claude Agents -->
+  <rect x="50" y="1910" width="530" height="240" class="card" rx="10"/>
+  <rect x="50" y="1910" width="530" height="40" class="agents-bg" rx="10"/>
+  <text x="80" y="1936" class="section-title">Claude Agents (.claude/agents/)</text>
+
+  <rect x="70" y="1970" width="490" height="145" class="agent-card" rx="8"/>
+  <text x="90" y="1995" class="command-name">gutenberg-block-architect</text>
+  <text x="90" y="2018" class="description">Elite WordPress Gutenberg Block development</text>
+  <text x="90" y="2038" class="small-text">Expertise: Block API, Core Components, UX Design,</text>
+  <text x="90" y="2056" class="small-text">Accessibility, Performance, Security</text>
+  <text x="90" y="2076" class="small-text">Use for: Creating/modifying Gutenberg blocks with</text>
+  <text x="90" y="2094" class="small-text">WordPress standards and Core Components only</text>
+
+  <!-- Copilot Agents -->
+  <rect x="620" y="1910" width="530" height="380" class="card" rx="10"/>
+  <rect x="620" y="1910" width="530" height="40" class="agents-bg" rx="10"/>
+  <text x="650" y="1936" class="section-title">Copilot Agents (.copilot/agents/)</text>
+
+  <!-- Contributor-Auto -->
+  <rect x="640" y="1970" width="490" height="155" class="agent-card" rx="8"/>
+  <text x="660" y="1995" class="command-name">Contributor-Auto</text>
+  <text x="660" y="2018" class="description">Automated branch creation, commits, and PR workflow</text>
+  <text x="660" y="2038" class="small-text">Capabilities:</text>
+  <text x="660" y="2056" class="small-text">• Creates branches and applies patches automatically</text>
+  <text x="660" y="2074" class="small-text">• Runs tests before creating PRs</text>
+  <text x="660" y="2092" class="small-text">• Uses GitHub CLI to open PRs</text>
+  <text x="660" y="2110" class="small-text">Use for: Automated PR creation workflows</text>
+
+  <!-- Contributor-Chat -->
+  <rect x="640" y="2145" width="490" height="130" class="agent-card" rx="8"/>
+  <text x="660" y="2170" class="command-name">Contributor-Chat</text>
+  <text x="660" y="2193" class="description">Interactive issue and PR preparation assistant</text>
+  <text x="660" y="2213" class="small-text">Capabilities:</text>
+  <text x="660" y="2231" class="small-text">• Prepares PR content and branch suggestions</text>
+  <text x="660" y="2249" class="small-text">• Creates patches for manual review</text>
+  <text x="660" y="2267" class="small-text">Use for: Interactive PR planning and preparation</text>
+
+  <!-- Footer -->
+  <rect x="50" y="2320" width="1100" height="60" fill="#1e40af" opacity="0.9" rx="10"/>
+  <text x="600" y="2348" font="14px sans-serif" fill="#ffffff" text-anchor="middle">📚 For detailed setup instructions, see .claude/commands/ and .copilot/setup-and-usage.md</text>
+  <text x="600" y="2368" font="12px sans-serif" fill="#ffffff" text-anchor="middle">Complete WordPress development workflow from architecture to deployment</text>
+</svg>

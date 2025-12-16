@@ -11,7 +11,7 @@ See also: `SCAFFOLDING.md` for scaffolding details, and `USAGE.md` for usage ins
 - `PLAN.md` - PLAN FIRST - before coding, create a project plan with milestones and tasks.
 - COMMANDS - Use [slash commands](https://docs.claude.com/en/docs/claude-code/commands/) to trigger actions.
 - REPLACEMENT - Store prompt values as variables for reuse. Access with `[variable-name]`.
-- CODE - `src` folder for source code.
+- CODE - `src` folder for source code, as `gutenberg-block-architect.md` as the agent, write commands like `/project:code.md`. 
 - ASSETS - `assets` folder for images, icons, styles, etc.
 - CONFIG - `config` folder for configuration files.
 - DOCUMENT - `docs` folder for larger projects, otherwise use Markdown files.
@@ -20,6 +20,29 @@ See also: `SCAFFOLDING.md` for scaffolding details, and `USAGE.md` for usage ins
 - ASK QUESTIONS - if unclear about requirements, ask for clarification.
 - REVIEW - use code review tools like GitHub PRs to ensure quality. Copilot can help with this.
 - VERSIONING - if significant changes have been pushed, change log, update plugin header and readme version.
+
+# agents
+- `gutenberg-block-architect.md` - main agent for building Gutenberg blocks and plugins.
+- Contributor-Auto.md - automates branch creation, commits, and PR creation. See `.copilot/agents/Contributor-Auto.md` for details.
+- Contributor-Chat.md - chat assistance with code-related questions and tasks. See `.copilot/agents/Contributor-Chat.md` for details.
+- `.copilot/agents/` - store additional agents here.
+- `.copilot/setup-and-usage.md` - setup and usage instructions for agents.
+
+# commands
+Custom commands: You can define your own commands in .md files to automate specific tasks, such as feature implementation, bug analysis, or code refactoring.
+
+Organization: These files can be stored in a project-specific directory like .claude/commands/ or a user-specific directory like ~/.claude/commands/.
+
+Usage: You would use a command like /project:code or /user:code to trigger the functionality defined in the corresponding code.md file.
+
+CLAUDE.md: The primary project configuration file, CLAUDE.md, can also contain instructions for code-related tasks, as well as common bash commands and style guidelines.
+
+Custom Claude Code commands for this project:
+
+- `@plan.md` - create project plan with milestones and tasks.
+- `@code.md` - generate code based on project plan and requirements.
+- `@test.md` - create tests for the code.
+- `@document.md` - generate documentation for the project.
 
 # About Claude Code for WordPress
 - [Claude Code documentation](https://docs.claude.com/en/docs/claude-code/)
