@@ -11,6 +11,9 @@ The commands cover various aspects of software development, including architectu
 
 ---
 
+## `wp-plugin` - WordPress Plugin Development Command Suite
+
+
 ## Usage Examples
 
 ### Complete Development Workflow
