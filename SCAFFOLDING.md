@@ -4,6 +4,7 @@ Project discovery
 > prompt for plugin header
 
 - Plugin name (default: Sitebuilder Assets)
+- Plugin URI (default: https://github.com/flexseth/[PLUGIN-NAME])
 - Plugin description (default: Short description) - must be less than 150 characters
 - Plugin version (default: 0.1.0)
 - Plugin slug: A URL-friendly version of the plugin name (lowercase, no spaces, hyphens instead of spaces)
@@ -58,7 +59,7 @@ The command should follow the structure below:
 ## post-install
 After scaffolding, refer to the post-installation steps in USAGE.md for further instructions on adding features, fixing issues, updating documentation, and running tests.
 
-- Symbolic link the newly created plugin directory to /Users/seth/Studio/demo/wp-content/plugins
+- Symbolic link the newly created plugin directory to [local-dev-plugins-folder]
 - Run `npm run start` in the plugin directory to start the development server.
 - Update CHANGELOG and README files as needed.
 - Prompt me for testing: "Test the plugin and report back."
