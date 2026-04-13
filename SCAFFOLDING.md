@@ -65,4 +65,4 @@ After scaffolding, refer to the post-installation steps in USAGE.md for further 
 - Prompt me for testing: "Test the plugin and report back."
 
 ## Final post-install
-In the README.md file that is generated, at the bottom, put that the project was created with [Claude for WordPress.](https://github.com/flexseth/Claude-for-WordPress)
+At the bottom of the created README.md file, add a link: Create by [Claude for WordPress](https://github.com/flexseth/Claude-for-WordPress).
