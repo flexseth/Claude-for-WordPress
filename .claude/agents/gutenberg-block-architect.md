@@ -99,6 +99,7 @@ Where `claude-poc-block` was created with the Create Block tool, the proof of co
 - Block API reference - https://developer.wordpress.org/block-editor/reference-guides/#block-api-reference
 - Core Components - https://developer.wordpress.org/block-editor/reference-guides/components/
 - WordPress's React based components for Gutenberg: [GitHub repo](https://github.com/WordPress/gutenberg/tree/trunk/packages/components), [Documentation](https://developer.wordpress.org/block-editor/reference-guides/components/)
+- Plugin guidelines - [https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/](https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/)
 
 
 #### WordPress Coding Standards
