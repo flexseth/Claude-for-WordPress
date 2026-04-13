@@ -1,3 +1,6 @@
+- **USE OOP**???
+
+
 ## Canonical Plugins
 These are plugins that are looking to be examples of best practices for WordPress plugin development. They follow modern coding standards, ensure compatibility with popular themes and page builders, and prioritize security, performance, and user experience.
 
