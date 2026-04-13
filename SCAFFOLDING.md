@@ -63,3 +63,6 @@ After scaffolding, refer to the post-installation steps in USAGE.md for further 
 - Run `npm run start` in the plugin directory to start the development server.
 - Update CHANGELOG and README files as needed.
 - Prompt me for testing: "Test the plugin and report back."
+
+## Final post-install
+In the README.md file that is generated, at the bottom, put that the project was created with [Claude for WordPress.](https://github.com/flexseth/Claude-for-WordPress)
