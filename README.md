@@ -19,7 +19,11 @@ A comprehensive development suite that leverages Claude Code agents to scaffold,
 - **An AI-driven pipeline** with self-correction feedback loops for high-quality output
 
 ### Opinionated
-The gutenberg agent in this software package explicitly states to use functional programming. This won't work for a plugin that could be canonical... that said, look in the agent file and change the line about "functional" or "OOP" - and you can tailor the agent for coding style preference.
+
+The gutenberg agent in this software package explicitly states to use functional programming. 
+
+Tailor the coding specifications to meet your needs.
+
 ---
 
 ## Quick Start
