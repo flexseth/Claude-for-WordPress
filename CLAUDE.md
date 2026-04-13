@@ -9,7 +9,7 @@ See also: `SCAFFOLDING.md` for scaffolding details, and `USAGE.md` for usage ins
 - `INSTRUCTIONS.md` - RECORD - Chat requests: Record all prompts, summary of action steps, and responses
 - `MEMORIES.md` - REMEMBER - save context window as memories
 - `PLAN.md` - PLAN FIRST - before coding, create a project plan with milestones and tasks.
-- COMMANDS - Use [slash commands](https://docs.claude.com/en/docs/claude-code/commands/) to trigger actions.
+- `COMMANDS` - Use [slash commands](https://docs.claude.com/en/docs/claude-code/commands/) to trigger actions. See [agent skills](.claude/agents/skills)
 - REPLACEMENT - Store prompt values as variables for reuse. Access with `[variable-name]`.
 - CODE - `src` folder for source code, as `gutenberg-block-architect.md` as the agent, write commands like `/project:code.md`. 
 - ASSETS - `assets` folder for images, icons, styles, etc.
@@ -76,7 +76,7 @@ This suite will create the project management and architecture for building plug
 - Scaffold the block using the `@wordpress/create-block` package[LINK]
 - Create all components based on WordPress Core components[LINK]
 - Utilize[ built in scripts and JS libraries from WordPress Core](https://developer.wordpress.org/reference/functions/wp_enqueue_script/#default-scripts-and-js-libraries-included-and-registered-by-wordpress)
-- Use functional components instead of class components for React and PHP
+- Use a functional paradigm for PHP and JavaScript programming, **never use OOP**
 - Follow WordPress coding standards (PHP, JS, CSS)
 - Use ESNext and modern JavaScript practices
 - Use the most recent APIs for block development - `block.json`
@@ -91,6 +91,10 @@ This suite will create the project management and architecture for building plug
 [Building a plugin](https://developer.wordpress.org/plugins/intro/)
 [Building a block plugin](https://developer.wordpress.org/block-editor/getting-started/tutorial/)
 
+## Documentation
+See the Gutenberg Architect agent for resources and links.
+
+### Summary of Deliverables ("Must Haves")
 This is the project starting point. Follow ALL practices above.
 
 More information below.
