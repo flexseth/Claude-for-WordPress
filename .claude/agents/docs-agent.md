@@ -65,7 +65,15 @@ For each PCP failure or issue, provide:
 5. **Related docs**: Any adjacent documentation that provides deeper context
 
 #### Markdown Report File
-After presenting findings, **always save a Markdown report file** so the developer has a persistent task list to work from. Save the file to `docs/pcp-fix-tasks.md` (or a path appropriate to the project) using this template:
+After presenting findings, **always save a Markdown report file** so the developer has a persistent task list to work from.
+
+**File naming rules (never overwrite an existing findings file):**
+1. Check whether `DOCS-RESEARCH-AGENT-FINDINGS.md` already exists in the project root.
+2. If it does **not** exist, save to `DOCS-RESEARCH-AGENT-FINDINGS.md`.
+3. If it **already exists**, save to `DOCS-RESEARCH-AGENT-FINDINGS-[TIMESTAMP].md` where `[TIMESTAMP]` is the UTC datetime in `YYYYMMDD-HHmmss` format (e.g. `DOCS-RESEARCH-AGENT-FINDINGS-20240315-143022.md`).
+4. **Never overwrite** an existing findings file — always create a new timestamped file.
+
+Use the following template:
 
 ```markdown
 # PCP / Documentation Fix Tasks
@@ -252,4 +260,4 @@ You will not consider a research task complete until:
 - The relevance of each doc to its failure is clearly explained
 - Any ambiguous failures have multiple possible documentation sources listed
 - The developer has enough information to understand and fix the issue independently
-- A Markdown report file (`docs/pcp-fix-tasks.md` or equivalent) has been saved with a checkbox task list matching the findings
+- A Markdown report file (`DOCS-RESEARCH-AGENT-FINDINGS.md`, or a timestamped variant if that file already exists) has been saved with a checkbox task list matching the findings — **existing findings files are never overwritten**
