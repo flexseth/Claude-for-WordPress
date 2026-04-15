@@ -92,37 +92,43 @@ Brief description of the plugin and the PCP report that was analysed.
 
 ### 🔴 Security
 - [ ] **[Failure label]** — [one-line description of what to fix]
-  - 📖 Docs: [URL]
+  - 📖 [Handbook section title](URL)
   - 💡 [Key takeaway]
 
 ### 🟡 Performance
 - [ ] **[Failure label]** — [one-line description of what to fix]
-  - 📖 Docs: [URL]
+  - 📖 [Handbook section title](URL)
   - 💡 [Key takeaway]
 
 ### 🟢 Internationalization
 - [ ] **[Failure label]** — [one-line description of what to fix]
-  - 📖 Docs: [URL]
+  - 📖 [Handbook section title](URL)
   - 💡 [Key takeaway]
 
 ### 🔵 Coding Standards
 - [ ] **[Failure label]** — [one-line description of what to fix]
-  - 📖 Docs: [URL]
+  - 📖 [Handbook section title](URL)
   - 💡 [Key takeaway]
 
 ### ⚪ Plugin Repository Requirements
 - [ ] **[Failure label]** — [one-line description of what to fix]
-  - 📖 Docs: [URL]
+  - 📖 [Handbook section title](URL)
   - 💡 [Key takeaway]
 
 ## Related Documentation
-- [Topic] — [URL]
+- [Topic description](URL)
 
 ## Notes
 Any additional context, caveats, or follow-up research needed.
 ```
 
 Only include sections that have failures. Omit empty sections. Each `- [ ]` checkbox becomes a trackable task the developer can tick off as they work through the fixes.
+
+**Formatting rules for the findings file (keep it browser-friendly):**
+- **Always use Markdown hyperlink syntax** `[label](URL)` — never paste bare URLs; bare URLs do not wrap and will overflow the page width
+- **No tables** in the findings file — use the checkbox list format above; tables with long cells overflow on narrow screens
+- **Keep task descriptions to one line** — if extra detail is needed, put it in a nested bullet, not on the same line
+- **Wrap long key takeaways** — if a takeaway exceeds ~100 characters, split it into two nested bullets
 
 ---
 
@@ -267,3 +273,4 @@ You will not consider a research task complete until:
 - Any ambiguous failures have multiple possible documentation sources listed
 - The developer has enough information to understand and fix the issue independently
 - A Markdown report file (`DOCS-RESEARCH-AGENT-FINDINGS.md`, or a timestamped variant if that file already exists) has been saved with a checkbox task list matching the findings — **existing findings files are never overwritten**
+- The findings file uses only Markdown hyperlink syntax (`[label](URL)`) — no bare URLs, no wide tables — so it renders correctly at any browser width
