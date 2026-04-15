@@ -5,7 +5,15 @@ All notable changes to Claude for WordPress will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.1.0] - 2026-04-15
+
+### Added
+- `.claude/agents/docs-agent.md` — new `wordpress-docs-researcher` Claude agent for locating WordPress documentation, interpreting Plugin Check Plugin (PCP) failures, and mapping each finding to its canonical Handbook source
+- Phase 4 of docs-agent workflow now writes findings to a Markdown report file (`DOCS-RESEARCH-AGENT-FINDINGS.md`) with timestamp-based versioning
+
+### Changed
+- Docs-agent model and expected-behavior guidance updated
+- Findings report format: Markdown hyperlinks required, bare URLs and tables banned to keep output readable at narrow widths
 
 ### Documentation
 - Rewrote README.md from a minimal stub into a comprehensive project overview
