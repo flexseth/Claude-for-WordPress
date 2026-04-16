@@ -1,0 +1,12 @@
+# GitHub Sponsors and funding configuration
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
+
+# GitHub Sponsors
+github: flexseth
+
+# TODO: Add additional funding platforms as they are set up
+# Possible options (uncomment and fill in when ready):
+# patreon: # username
+# ko_fi: # username          (Buy Me a Coffee alternative)
+# buy_me_a_coffee: # username
+# custom: # ['https://paypal.me/username', 'https://venmo.com/username', 'https://cash.app/$username']
