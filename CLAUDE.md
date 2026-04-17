@@ -23,17 +23,21 @@ See also: `SCAFFOLDING.md` for scaffolding details, and `USAGE.md` for usage ins
 
 # agents
 - `gutenberg-block-architect.md` - main agent for building Gutenberg blocks and plugins.
+- `html-to-blocks-agent.md` - specialized agent for converting HTML markup to WordPress Gutenberg blocks.
+- `docs-agent.md` - WordPress documentation researcher for finding official docs and fixing PCP failures.
 - Contributor-Auto.md - automates branch creation, commits, and PR creation. See `.copilot/agents/Contributor-Auto.md` for details.
 - Contributor-Chat.md - chat assistance with code-related questions and tasks. See `.copilot/agents/Contributor-Chat.md` for details.
 - `.copilot/agents/` - store additional agents here.
 - `.copilot/setup-and-usage.md` - setup and usage instructions for agents.
+
+**Note:** Agents can be invoked via natural language prompts (e.g., "Use the HTML to Blocks agent to convert this HTML") or through commands.
 
 # commands
 Custom commands: You can define your own commands in .md files to automate specific tasks, such as feature implementation, bug analysis, or code refactoring.
 
 Organization: These files can be stored in a project-specific directory like .claude/commands/ or a user-specific directory like ~/.claude/commands/.
 
-Usage: You would use a command like /project:code or /user:code to trigger the functionality defined in the corresponding code.md file.
+Usage: Commands can be invoked using command syntax (e.g., `@code.md` or `/project:code`) or through natural language prompts (e.g., "Use the HTML to Blocks agent to convert this HTML").
 
 CLAUDE.md: The primary project configuration file, CLAUDE.md, can also contain instructions for code-related tasks, as well as common bash commands and style guidelines.
 
@@ -43,6 +47,9 @@ Custom Claude Code commands for this project:
 - `@code.md` - generate code based on project plan and requirements.
 - `@test.md` - create tests for the code.
 - `@document.md` - generate documentation for the project.
+- `@html-to-blocks.md` - convert HTML markup to WordPress Gutenberg blocks.
+
+**Tip:** All commands and agents can be invoked via natural language - simply ask Claude directly!
 
 # About Claude Code for WordPress
 - [Claude Code documentation](https://docs.claude.com/en/docs/claude-code/)

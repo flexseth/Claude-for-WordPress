@@ -12,8 +12,8 @@ A comprehensive development suite that leverages Claude Code agents to scaffold,
 
 **Claude for WordPress** is a Claude Code workspace configuration that turns Claude into a specialist WordPress developer. It provides:
 
-- **Slash commands** (`/wp-plugin`) to scaffold complete plugins and blocks interactively
-- **Specialized AI agents** for architecture, code generation, review, testing, and deployment
+- **Specialized AI agents** that you can invoke via natural language prompts or commands
+- **Flexible invocation** - use slash commands (`/wp-plugin`), `@` commands (`@html-to-blocks.md`), or simply ask Claude directly
 - **Project templates** for every common WordPress plugin type
 - **Automated compliance** with WordPress Coding Standards, Plugin Check Plugin, accessibility, and i18n requirements
 - **An AI-driven pipeline** with self-correction feedback loops for high-quality output
@@ -37,13 +37,24 @@ Tailor the coding specifications to meet your needs.
 
 ### Create a New Plugin or Block
 
-Open this repository in Claude Code and run:
+Open this repository in Claude Code and use any of these methods:
 
+**Method 1: Slash command**
 ```bash
 /wp-plugin
 ```
 
-Claude will guide you through an interactive discovery process and scaffold a fully structured WordPress plugin or Gutenberg block.
+**Method 2: @ command**
+```bash
+@html-to-blocks.md <section>...</section>
+```
+
+**Method 3: Natural language (no command needed)**
+```
+Use the HTML to Blocks agent to convert this hero section HTML to a Gutenberg block
+```
+
+Claude will guide you through the process and handle the implementation.
 
 ---
 
@@ -84,7 +95,13 @@ See [AGENTS.md](./AGENTS.md) for the full pipeline description and feedback loop
 | `@review.md` | Code quality and security review |
 | `@optimize.md` | Performance analysis and optimization |
 | `@deploy-check.md` | Pre-deployment readiness validation |
+| `@html-to-blocks.md` | Convert HTML markup to WordPress Gutenberg blocks |
 | `/wp-plugin` | Full WordPress plugin/block development workflow |
+
+**Note:** Commands can be invoked using `@command.md` syntax, or you can simply ask Claude in natural language:
+- "Use the HTML to Blocks agent to convert this HTML"
+- "Convert this HTML section to a Gutenberg block"
+- "Use the html-to-blocks-agent to transform this landing page"
 
 See [COMMANDS-AND-AGENTS-GUIDE.md](./COMMANDS-AND-AGENTS-GUIDE.md) for detailed usage.
 
@@ -132,10 +149,15 @@ When creating a standard plugin, choose from the following templates:
 ```
 Claude-for-WordPress/
 ├── .claude/
+│   ├── agents/             # Claude agent definitions
+│   │   ├── gutenberg-block-architect.md
+│   │   ├── html-to-blocks-agent.md
+│   │   └── docs-agent.md
 │   ├── commands/           # Claude slash command definitions
 │   │   ├── code.md
 │   │   ├── debug.md
 │   │   ├── deploy-check.md
+│   │   ├── html-to-blocks.md
 │   │   ├── optimize.md
 │   │   ├── refactor.md
 │   │   ├── review.md
