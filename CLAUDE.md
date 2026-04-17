@@ -23,6 +23,8 @@ See also: `SCAFFOLDING.md` for scaffolding details, and `USAGE.md` for usage ins
 
 # agents
 - `gutenberg-block-architect.md` - main agent for building Gutenberg blocks and plugins.
+- `html-to-blocks-agent.md` - specialized agent for converting HTML markup to WordPress Gutenberg blocks.
+- `docs-agent.md` - WordPress documentation researcher for finding official docs and fixing PCP failures.
 - Contributor-Auto.md - automates branch creation, commits, and PR creation. See `.copilot/agents/Contributor-Auto.md` for details.
 - Contributor-Chat.md - chat assistance with code-related questions and tasks. See `.copilot/agents/Contributor-Chat.md` for details.
 - `.copilot/agents/` - store additional agents here.
@@ -43,6 +45,7 @@ Custom Claude Code commands for this project:
 - `@code.md` - generate code based on project plan and requirements.
 - `@test.md` - create tests for the code.
 - `@document.md` - generate documentation for the project.
+- `@html-to-blocks.md` - convert HTML markup to WordPress Gutenberg blocks.
 
 # About Claude Code for WordPress
 - [Claude Code documentation](https://docs.claude.com/en/docs/claude-code/)

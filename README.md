@@ -84,6 +84,7 @@ See [AGENTS.md](./AGENTS.md) for the full pipeline description and feedback loop
 | `@review.md` | Code quality and security review |
 | `@optimize.md` | Performance analysis and optimization |
 | `@deploy-check.md` | Pre-deployment readiness validation |
+| `@html-to-blocks.md` | Convert HTML markup to WordPress Gutenberg blocks |
 | `/wp-plugin` | Full WordPress plugin/block development workflow |
 
 See [COMMANDS-AND-AGENTS-GUIDE.md](./COMMANDS-AND-AGENTS-GUIDE.md) for detailed usage.
@@ -132,10 +133,15 @@ When creating a standard plugin, choose from the following templates:
 ```
 Claude-for-WordPress/
 ├── .claude/
+│   ├── agents/             # Claude agent definitions
+│   │   ├── gutenberg-block-architect.md
+│   │   ├── html-to-blocks-agent.md
+│   │   └── docs-agent.md
 │   ├── commands/           # Claude slash command definitions
 │   │   ├── code.md
 │   │   ├── debug.md
 │   │   ├── deploy-check.md
+│   │   ├── html-to-blocks.md
 │   │   ├── optimize.md
 │   │   ├── refactor.md
 │   │   ├── review.md

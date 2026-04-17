@@ -356,6 +356,19 @@ Third-party integration specialist:
 - Popular page builders (Elementor, Beaver Builder, Divi)
 - Popular themes (Astra, GeneratePress, OceanWP, Neve, Kadence, Blocksy)
 
+### HTML to Blocks Agent (specialized)
+Converts HTML markup to WordPress Gutenberg blocks:
+
+**Focus Areas:**
+- HTML structure analysis and parsing
+- Block attribute mapping from HTML
+- Semantic HTML preservation
+- Responsive design conversion
+- Accessibility compliance in conversions
+- CSS to WordPress block styles
+- Static HTML to dynamic blocks
+- Legacy content migration
+
 ---
 
 ## Usage

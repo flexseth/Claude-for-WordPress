@@ -95,6 +95,14 @@
 - **Enforces:** WordPress Coding Standards, Security, Accessibility, i18n, Performance, Testing
 - **Use for:** Creating WordPress plugins with complete compliance and best practices
 
+#### `@html-to-blocks.md <HTML_SOURCE>`
+
+**Convert HTML markup to WordPress Gutenberg blocks**
+
+- **Specialist Agents:** HTML Analyzer • Block Architect • Block Developer • Quality Validator
+- **Use for:** Converting static HTML to dynamic blocks, migrating legacy content, transforming HTML templates
+- **Features:** Semantic preservation, design fidelity, responsive conversion, accessibility compliance
+
 ---
 
 ## 🤖 Development Agents
@@ -107,6 +115,21 @@
 
 - **Expertise:** Block API, Core Components, UX Design, Accessibility, Performance, Security
 - **Use for:** Creating/modifying Gutenberg blocks with WordPress standards and Core Components only
+
+#### `html-to-blocks-agent`
+
+**HTML to WordPress Gutenberg Blocks conversion specialist**
+
+- **Expertise:** HTML/CSS Analysis, Block Architecture, Semantic Mapping, Responsive Design, Accessibility
+- **Use for:** Converting HTML markup to blocks, migrating legacy content, transforming templates to block patterns
+- **Features:** Design fidelity, semantic preservation, WordPress-native solutions
+
+#### `wordpress-docs-researcher`
+
+**WordPress Documentation Research and PCP failure resolution**
+
+- **Expertise:** WordPress Handbooks, Plugin Check Plugin, Documentation sources, Coding Standards
+- **Use for:** Finding documentation for PCP failures, researching WordPress APIs, understanding best practices
 
 ---
 
@@ -150,10 +173,10 @@ For detailed setup instructions, see:
 | Category | Commands | Purpose |
 |----------|----------|---------|
 | 🏗️ **Architecture & Design** | `@ask.md` | Strategic planning and technical guidance |
-| 💻 **Development** | `@code.md`, `@debug.md`, `@refactor.md` | Feature implementation, debugging, code improvement |
+| 💻 **Development** | `@code.md`, `@debug.md`, `@refactor.md`, `@html-to-blocks.md` | Feature implementation, debugging, code improvement, HTML conversion |
 | 🔍 **Quality Assurance** | `@test.md`, `@review.md`, `@optimize.md` | Testing, code review, performance optimization |
 | 🚀 **Operations** | `@deploy-check.md` | Deployment readiness validation |
-| 🔌 **WordPress** | `/wp-plugin` | WordPress plugin development |
+| 🔌 **WordPress** | `/wp-plugin`, `@html-to-blocks.md` | WordPress plugin development, HTML to blocks conversion |
 
 ---
 
@@ -213,3 +236,23 @@ For detailed setup instructions, see:
 # 4. Test accessibility
 @test.md block accessibility features
 ```
+
+### HTML to Blocks Conversion Workflow
+
+```bash
+# 1. Convert HTML markup to blocks
+@html-to-blocks.md <section class="hero">...</section>
+
+# 2. Review generated block code
+@review.md converted hero block
+
+# 3. Test block functionality
+@test.md hero block editor and frontend rendering
+
+# 4. Optimize block performance
+@optimize.md hero block bundle size and loading
+
+# 5. Check deployment readiness
+@deploy-check.md hero block for production
+```
+
