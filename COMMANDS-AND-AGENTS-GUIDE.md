@@ -8,7 +8,17 @@
 
 **Commands:** Use `@command.md <DESCRIPTION>` to trigger specialized workflows
 
-**Agents:** Specialized AI assistants for WordPress development tasks
+**Natural Language:** Simply ask Claude directly - "Use the HTML to Blocks agent to convert this HTML"
+
+**Agents:** Specialized AI assistants that can be invoked by command or natural language prompt
+
+### Invocation Methods
+
+1. **Natural Language (Recommended):** "Use the html-to-blocks-agent to convert this landing page HTML"
+2. **@ Commands:** `@html-to-blocks.md <HTML_SOURCE>`
+3. **Slash Commands:** `/wp-plugin`
+
+Choose the method that feels most natural for your workflow.
 
 ---
 
@@ -103,6 +113,20 @@
 - **Use for:** Converting static HTML to dynamic blocks, migrating legacy content, transforming HTML templates
 - **Features:** Semantic preservation, design fidelity, responsive conversion, accessibility compliance
 
+**Invocation Methods:**
+
+1. **Natural Language (Recommended):**
+   ```
+   Use the HTML to Blocks agent to convert this hero section to a Gutenberg block
+   ```
+
+2. **Command Syntax:**
+   ```bash
+   @html-to-blocks.md <section>...</section>
+   ```
+
+**Why natural language?** You can provide context, specify requirements, and describe the intended use case more clearly.
+
 ---
 
 ## 🤖 Development Agents
@@ -123,6 +147,15 @@
 - **Expertise:** HTML/CSS Analysis, Block Architecture, Semantic Mapping, Responsive Design, Accessibility
 - **Use for:** Converting HTML markup to blocks, migrating legacy content, transforming templates to block patterns
 - **Features:** Design fidelity, semantic preservation, WordPress-native solutions
+
+**How to invoke:**
+```
+"Use the HTML to Blocks agent to convert this HTML..."
+"Use the html-to-blocks-agent to transform this landing page..."
+"Convert this hero section to a Gutenberg block with editable text..."
+```
+
+Or use the command: `@html-to-blocks.md <HTML_SOURCE>`
 
 #### `wordpress-docs-researcher`
 
@@ -239,6 +272,23 @@ For detailed setup instructions, see:
 
 ### HTML to Blocks Conversion Workflow
 
+**Method 1: Natural Language (Recommended)**
+
+```
+Use the HTML to Blocks agent to convert this hero section HTML to a Gutenberg block.
+Make sure it's fully accessible and the text is editable:
+
+<section class="hero">
+  <h1>Welcome</h1>
+  <p>Description</p>
+  <button>CTA</button>
+</section>
+
+After conversion, review the code and test it in the block editor.
+```
+
+**Method 2: Command-Based**
+
 ```bash
 # 1. Convert HTML markup to blocks
 @html-to-blocks.md <section class="hero">...</section>
@@ -255,4 +305,6 @@ For detailed setup instructions, see:
 # 5. Check deployment readiness
 @deploy-check.md hero block for production
 ```
+
+**Tip:** Natural language allows you to provide additional context and requirements that help the agent produce better results.
 

@@ -6,7 +6,7 @@ The **HTML to Blocks Agent** is a specialized AI agent designed to convert HTML 
 
 ## Quick Start
 
-### Using the Command
+### Method 1: Using the Command
 
 Convert HTML to blocks using the `@html-to-blocks.md` command:
 
@@ -19,9 +19,45 @@ Where `<HTML_SOURCE>` can be:
 - Path to an HTML file
 - URL to an HTML page
 
+### Method 2: Natural Language (Recommended)
+
+You can invoke the HTML to Blocks agent using natural language prompts - **no command needed**:
+
+```
+Use the HTML to Blocks agent to convert this hero section HTML to a Gutenberg block
+
+<section class="hero">
+  <h1>Welcome to Our Site</h1>
+  <p>Discover amazing products</p>
+  <a href="#products" class="btn">Get Started</a>
+</section>
+```
+
+Or more verbosely:
+
+```
+Use the HTML to Block Markup agent to convert the following HTML to WordPress blocks. 
+The HTML represents a feature grid that needs to be editable in the block editor.
+
+<div class="features">
+  <div class="feature">
+    <img src="icon1.svg" alt="Fast" />
+    <h3>Lightning Fast</h3>
+    <p>Our service is incredibly fast</p>
+  </div>
+</div>
+```
+
+**Benefits of natural language invocation:**
+- Provide additional context about the HTML
+- Specify particular requirements (e.g., "make sure it's fully accessible")
+- Describe the intended use case
+- Request specific features or customizations
+- More intuitive and conversational
+
 ### Examples
 
-#### Example 1: Simple Hero Section
+#### Example 1: Simple Hero Section (Command)
 
 ```bash
 @html-to-blocks.md <section class="hero">
@@ -31,16 +67,36 @@ Where `<HTML_SOURCE>` can be:
 </section>
 ```
 
-#### Example 2: From File
+#### Example 1b: Simple Hero Section (Natural Language)
+
+```
+Convert this hero section HTML to a Gutenberg block:
+
+<section class="hero">
+  <h1>Welcome to Our Site</h1>
+  <p>Discover amazing products</p>
+  <a href="#products" class="btn">Get Started</a>
+</section>
+```
+
+#### Example 2: From File (Command)
 
 ```bash
 @html-to-blocks.md path/to/landing-page.html
 ```
 
-#### Example 3: Feature Grid
+#### Example 2b: From File (Natural Language)
 
-```bash
-@html-to-blocks.md <div class="features">
+```
+Use the html-to-blocks-agent to convert the HTML file at path/to/landing-page.html into WordPress blocks
+```
+
+#### Example 3: Feature Grid with Context (Natural Language)
+
+```
+Use the HTML to Blocks agent to convert this feature grid. Make sure each feature can be added/removed dynamically and that the icons are easily replaceable:
+
+<div class="features">
   <div class="feature">
     <img src="icon1.svg" alt="Fast" />
     <h3>Lightning Fast</h3>
