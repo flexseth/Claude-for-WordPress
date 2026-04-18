@@ -1,0 +1,26 @@
+# Local / environment-specific settings — NEVER commit these
+settings.local.json
+*.local.json
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+
+# Build output
+build/Release
+coverage
+
+# WordPress plugin artifacts
+*.tgz
+*.zip
+
+# Logs
+logs
+*.log
