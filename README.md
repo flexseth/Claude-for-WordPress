@@ -169,6 +169,7 @@ Claude-for-WordPress/
 │   │   ├── Contributor-Auto.md   # Automated PR workflow agent
 │   │   └── Contributor-Chat.md   # Interactive PR planning agent
 │   └── setup-and-usage.md
+├── docs/                   # Consolidated documentation resources
 ├── project-templates/      # Starter project templates
 ├── AGENTS.md               # AI agent pipeline documentation
 ├── CLAUDE.md               # Claude Code project configuration
@@ -191,6 +192,8 @@ Claude-for-WordPress/
 | [COMMANDS-AND-AGENTS-GUIDE.md](./COMMANDS-AND-AGENTS-GUIDE.md) | Full command reference and workflow examples |
 | [SITEBUILDER.md](./SITEBUILDER.md) | High-level project overview |
 | [CLAUDE.md](./CLAUDE.md) | Claude Code assistant standards and configuration |
+| [docs/README.md](./docs/README.md) | Consolidated docs/resources entry point |
+| [docs/MDX-AUDIT.md](./docs/MDX-AUDIT.md) | MDX best-practice audit and setup guidance |
 
 ---
 
